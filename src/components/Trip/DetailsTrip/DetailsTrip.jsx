@@ -24,7 +24,7 @@ const DetailsTrip = ({ tripName, image, long_description, rating }) => {
     return (
         <article className={`col ${styles.details_card}`}>
             <header className={`col ${styles.details_card_header}`}>
-                <h3 className={styles.details_card_description}>{tripName}</h3>
+                <h3 className={styles.details_card_header_name}>{tripName}</h3>
                 <Shared.Rating value={rating} />
             </header>
             <div className={`row ${styles.details_card_image_wrapper}`}>

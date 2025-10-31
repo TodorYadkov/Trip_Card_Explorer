@@ -12,10 +12,28 @@
     .details_card_header {
         gap: 0.25rem;
 
-        .details_card_description {
+        .details_card_header_name {
             @include m.text-ellipsis;
             font-size: 1.5rem;
             font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .details_card_header_name {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .details_card_header_name {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .details_card_header_name {
+                font-size: 0.8rem;
+            }
         }
     }
 
