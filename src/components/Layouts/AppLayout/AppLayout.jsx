@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setData } from "../../../store";
 import { useFetcher } from "../../../hooks";
 
-import { Shared } from "../../../components";
+import { Shared, Modal, Footer, } from "../../../components";
 
 /**
  * AppLayout Component
@@ -36,8 +36,19 @@ const AppLayout = () => {
 
             </main>
 
+            <Footer />
 
             {isLoading && <div className={styles.app_layout_loader}><Shared.Loader /></div>}
+
+            {modalProps.isOpenModal && (
+                <Modal
+                    title={modalProps.title}
+                    content={modalProps.content}
+                    btnText={modalProps.btnText}
+                    backdrop={modalProps.backdrop}
+                    modalHandler={modalProps.modalHandler}
+                />
+            )}
         </div>
     );
 };
