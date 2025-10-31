@@ -8,7 +8,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import { store } from "./store";
 
 import App from "./App.jsx";
-import { ErrorBoundaryComponent } from "./pages";
+import { ErrorBoundaryComponent } from "./components";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
