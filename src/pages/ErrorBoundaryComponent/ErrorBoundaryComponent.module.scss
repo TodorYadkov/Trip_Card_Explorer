@@ -1,0 +1,67 @@
+@use "../../styles/global/colors" as c;
+@use "../../styles/global/mixin" as m;
+@use "../../styles/global/animation" as *;
+
+.error_boundary_container {
+    @include smooth-showing(0.8s);
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image:
+        linear-gradient(to left top,
+            c.$color-green-transparent,
+            c.$color-yellow-transparent),
+        url("../../assets/images/error-boundary-background.jpg");
+    background-size: cover;
+    background-position: top;
+
+    .error_boundary_message {
+        @include m.shadow-large;
+        cursor: default;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        font-weight: 700;
+        font-size: 2.2rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: c.$color-blue;
+        background-color: c.$color-background-transparent;
+        padding: 1rem 2rem;
+        border-radius: 6px;
+        position: relative;
+        backface-visibility: hidden;
+        transition: all 500ms ease-in;
+
+        &:hover {
+            transform: scale(1.05);
+            background-color: c.$color-background;
+        }
+
+        >span {
+            font-weight: 400;
+            font-size: 1rem;
+            text-transform: none;
+            color: c.$color-text-light;
+        }
+
+        span:nth-of-type(2) {
+            cursor: pointer;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 8px;
+            transition: all 300ms;
+
+            &:hover {
+                color: c.$color-text-light;
+                text-decoration-color: c.$color-text-light;
+                opacity: 0.8;
+            }
+        }
+    }
+}
