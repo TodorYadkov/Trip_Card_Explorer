@@ -1,0 +1,45 @@
+.icon {
+  height: 1.8rem;
+  width: 1.8rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.no-active {
+    cursor: default;
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  &.icon-linkedin {
+    background-image: url("../../assets/icons/icon-linkedin.svg");
+  }
+
+  &.icon-github {
+    background-image: url("../../assets/icons/icon-github.svg");
+  }
+
+  &.icon-email {
+    background-image: url("../../assets/icons/icon-email.svg");
+  }
+
+  &.icon-sorting-ascending {
+    background-image: url("../../assets/icons/icon-sorting-ascending.svg");
+  }
+
+  &.icon-sorting-descending {
+    background-image: url("../../assets/icons/icon-sorting-descending.svg");
+  }
+
+  &.icon-sorting {
+    background-image: url("../../assets/icons/icon-sorting.svg");
+  }
+}

@@ -1,0 +1,23 @@
+%flex {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+
+.row {
+    @extend %flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.col {
+    @extend %flex;
+    flex-direction: column;
+}
+
+.container_max_width {
+    width: 100%;
+    max-width: 2180px;
+}

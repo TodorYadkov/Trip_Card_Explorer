@@ -1,0 +1,17 @@
+@use "../global/colors" as c;
+
+body,
+#root {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: c.$color-background;
+    background-image:
+        linear-gradient(to left top,
+            c.$color-green-transparent,
+            c.$color-yellow-transparent),
+        url("../../assets/images/main-background.jpg");
+    background-size: cover;
+    background-position: top;
+}

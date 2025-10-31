@@ -1,0 +1,87 @@
+/* Box sizing rules */
+html {
+    position: fixed;
+    inset: 0;
+    box-sizing: inherit;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: default;
+}
+
+@media print {
+    html {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+    }
+
+    html,
+    body {
+        height: auto;
+    }
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Make images easier to work */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    appearance: none !important;
+    /* For Firefox */
+    -moz-appearance: textfield !important;
+    /* For WebKit-based browsers */
+    -webkit-appearance: textfield !important;
+}
+
+a {
+    all: unset;
+    display: inline;
+    color: inherit;
+    cursor: pointer;
+}

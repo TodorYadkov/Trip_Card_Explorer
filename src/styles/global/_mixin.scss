@@ -1,0 +1,37 @@
+@use "colors" as c;
+
+@mixin shadow-small {
+    box-shadow: 0px 1px 4px 0px c.$color-shadow;
+}
+
+@mixin shadow-large {
+    box-shadow: 0px 5px 15px 0px c.$color-shadow;
+}
+
+@mixin scrollbar-hover-effect {
+    scroll-behavior: smooth;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+    transition: scrollbar-color 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9);
+    height: 100%;
+    overflow: auto;
+
+    &:hover {
+        scrollbar-color: c.$color-blue c.$color-background-transparent;
+    }
+}
+
+@mixin remove-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
