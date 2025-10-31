@@ -16,7 +16,8 @@
 
     &>* {
         flex: 1 1 calc(20% - 1rem);
-        min-width: 250px;
+        min-width: 340px;
+        max-width: 400px;
     }
 
     .dashboard_content_empty {
