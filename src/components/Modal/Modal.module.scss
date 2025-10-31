@@ -1,0 +1,50 @@
+@use "../../styles/global/colors.scss" as c;
+@use "../../styles/global/mixin.scss" as m;
+@use "../../styles/global/animation.scss" as *;
+
+.modal {
+    @include smooth-showing;
+    position: fixed;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    inset: 0;
+    background-color: rgba(c.$color-shadow, 0.5);
+
+    .modal_wrapper {
+        @include m.shadow-large;
+        gap: 1.5rem;
+        width: 90%;
+        max-width: 800px;
+        max-height: 80vh;
+        min-width: 300px;
+        min-height: 180px;
+        padding: 1.5rem;
+        background-color: c.$color-background;
+        border-radius: 6px;
+        overflow: hidden;
+
+        .modal_header {
+            justify-content: space-between;
+
+            h4 {
+                @include m.text-ellipsis;
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: c.$color-text;
+                text-transform: uppercase;
+            }
+        }
+
+        .modal_content {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .modal_footer {
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+    }
+}
