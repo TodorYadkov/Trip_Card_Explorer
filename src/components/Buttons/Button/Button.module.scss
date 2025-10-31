@@ -1,0 +1,27 @@
+@use "../../../styles/global/colors.scss" as c;
+
+.button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    background-color: c.$color-blue;
+    color: c.$color-white;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    position: relative;
+
+    &.red_button {
+        background-color: c.$color-red;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+}

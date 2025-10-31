@@ -1,0 +1,26 @@
+@use "../../../styles/global/colors" as c;
+@use "../../../styles/global/mixin" as m;
+
+.button_sort {
+    @include m.shadow-small;
+    cursor: pointer;
+    border-radius: 6px;
+    padding-inline: 0.2rem;
+    border: 2px solid c.$color-border;
+    background-color: c.$color-background-transparent;
+    transition: all .3s ease;
+
+    &.active {
+        border-color: c.$color-blue;
+        background-color: c.$color-white;
+    }
+
+    &:hover {
+        border-color: c.$color-blue;
+        background-color: c.$color-white;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
