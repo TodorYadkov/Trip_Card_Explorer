@@ -1,0 +1,35 @@
+@use "../../styles/global/colors" as c;
+@use "../../styles/global/mixin" as m;
+
+.dashboard_container {
+    @include m.shadow-large;
+    @include m.scrollbar-hover-effect;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100%;
+    padding: 2vh 2vw;
+    background-color: c.$color-background-transparent;
+    border-radius: 6px;
+    position: relative;
+
+    &>* {
+        flex: 1 1 calc(20% - 1rem);
+        min-width: 250px;
+    }
+
+    .dashboard_content_empty {
+        @include m.shadow-small;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem 1vw;
+        border-radius: 6px;
+        background-color: c.$color-white;
+        user-select: none;
+    }
+}
