@@ -1,0 +1,44 @@
+.loader {
+    width: clamp(60px, 30vw, 300px);
+    aspect-ratio: 1;
+
+    display: grid;
+    border-radius: 50%;
+    --loader-color: #ffd738;
+    background: radial-gradient(circle 20% at center, var(--loader-color) 90%, transparent);
+    filter: drop-shadow(0 0 2px var(--loader-color));
+    animation: pulse 1.2s infinite alternate ease-in-out;
+
+    &::before,
+    &::after {
+        content: "";
+        grid-area: 1 / 1;
+        border-radius: 50%;
+        --g: no-repeat linear-gradient(var(--loader-color) 0 0) 50%;
+        background:
+            var(--g) / 100% 6px,
+            var(--g) / 6px 100%;
+        -webkit-mask: radial-gradient(farthest-side, transparent 60%, #000 61%);
+    }
+
+    &::after {
+        transform: rotate(45deg);
+    }
+
+    @keyframes pulse {
+        0% {
+            filter: drop-shadow(0 0 2px var(--loader-color)) brightness(1);
+            transform: rotate(0deg) scale(1);
+        }
+
+        50% {
+            filter: drop-shadow(0 0 10px var(--loader-color)) brightness(1.2);
+            transform: rotate(180deg) scale(1.1);
+        }
+
+        100% {
+            filter: drop-shadow(0 0 20px var(--loader-color)) brightness(1.3);
+            transform: rotate(360deg) scale(1);
+        }
+    }
+}
