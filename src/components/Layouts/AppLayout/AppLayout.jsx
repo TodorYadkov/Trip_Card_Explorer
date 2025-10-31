@@ -6,7 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { setData } from "../../../store";
 import { useFetcher } from "../../../hooks";
 
-import { Shared, Modal, Footer, } from "../../../components";
+import { Footer, Header, Modal, Shared } from "../../../components";
+import { Dashboard, } from "../../../pages";
 
 /**
  * AppLayout Component
@@ -31,9 +32,10 @@ const AppLayout = () => {
 
     return (
         <div className={`col ${styles.app_layout_container}`}>
+            <Header />
 
             <main className={`col ${styles.app_layout_main}`}>
-
+                <Dashboard />
             </main>
 
             <Footer />
