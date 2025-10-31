@@ -1,0 +1,32 @@
+@use "../../styles/global/colors" as c;
+@use "../../styles/global/mixin" as m;
+
+.header {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 50px;
+    max-height: 90px;
+    padding: 1vh 2vw;
+    background-color: c.$color-background-transparent;
+
+    .header_wrapper {
+        justify-self: flex-end;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .header_text {
+            font-size: clamp(1.2rem, 2vw, 2rem);
+            font-weight: 600;
+            color: c.$color-blue;
+            user-select: none;
+        }
+
+        .header_actions {
+            gap: 0.5rem;
+        }
+    }
+
+}
