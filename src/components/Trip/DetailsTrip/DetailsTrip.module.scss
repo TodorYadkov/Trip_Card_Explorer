@@ -1,0 +1,64 @@
+@use "../../../styles/global/colors.scss" as c;
+@use "../../../styles/global/mixin.scss" as m;
+
+.details_card {
+    @include m.scrollbar-hover-effect;
+    width: 100%;
+    gap: 1rem;
+    min-height: 600px;
+    max-height: 700px;
+    padding-inline: 0.5rem;
+
+    .details_card_header {
+        gap: 0.25rem;
+
+        .details_card_description {
+            @include m.text-ellipsis;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+
+    .details_card_image_wrapper {
+        @include m.shadow-small;
+        justify-content: center;
+        width: 100%;
+        height: 400px;
+        max-height: 400px;
+        user-select: none;
+        overflow: hidden;
+        border-radius: 6px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            @include m.shadow-large;
+        }
+
+        .details_card_image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .details_card_body {
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+
+        .details_card_description {
+            font-size: 1rem;
+            line-height: 1.5;
+            padding-left: 1rem;
+            border-left: 3px solid c.$color-blue;
+            background: linear-gradient(90deg, rgba(c.$color-blue, 0.03), transparent);
+            border-radius: 4px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                @include m.shadow-large;
+                background: linear-gradient(90deg, rgba(c.$color-blue, 0.06), transparent);
+            }
+        }
+    }
+}
