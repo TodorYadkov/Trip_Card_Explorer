@@ -5,7 +5,7 @@
 **Trip Card Explorer** is a React application that allows users to explore trips with detailed information, search locations, and sort trips by rating.</br>
 The application is designed with **scalable architecture** in mind, using small, reusable components and centralized state management with **Redux**. It demonstrates modern React patterns like **hooks**, **error boundaries**, and modular styling.
 
-**Try it out:** [Trip Card Explorer - Live Demo](https://trip-card-explorer.vercel.app/)
+**Live Demo:** https://trip-card-explorer.vercel.app/
 
 ---
 
