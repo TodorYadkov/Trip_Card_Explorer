@@ -1,0 +1,33 @@
+@use "../../styles/global/colors" as c;
+
+.footer {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 50px;
+    max-height: 130px;
+    padding: 1vh 2vw;
+    background-color: c.$color-background-transparent;
+
+    .footer_wrapper {
+        justify-self: flex-end;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .footer_info {
+            gap: 0.5rem;
+            align-items: flex-end;
+
+            li {
+                height: 1.8rem;
+            }
+        }
+
+        .footer_actions {
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+    }
+}
